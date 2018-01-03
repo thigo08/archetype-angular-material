@@ -1,5 +1,5 @@
-import {Component, NgModule} from '@angular/core';
-import {MatButtonModule, MatMenuModule} from '@angular/material';
+import {Component, NgModule, Output, EventEmitter} from '@angular/core';
+import {MatButtonModule, MatMenuModule, MatIconModule} from '@angular/material';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {ThemePickerModule} from '../theme-picker/theme-picker';
@@ -13,6 +13,9 @@ const SECTIONS_KEYS = Object.keys(SECTIONS);
   styleUrls: ['./navbar.scss']
 })
 export class NavBar {
+
+  @Output() toggleSidenav = new EventEmitter<void>();
+
   get sections() {
     return SECTIONS;
   }
@@ -23,7 +26,7 @@ export class NavBar {
 }
 
 @NgModule({
-  imports: [MatButtonModule, MatMenuModule, RouterModule, ThemePickerModule, CommonModule],
+  imports: [MatButtonModule, MatMenuModule, MatIconModule, RouterModule, ThemePickerModule, CommonModule],
   exports: [NavBar],
   declarations: [NavBar],
 })

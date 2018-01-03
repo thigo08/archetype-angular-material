@@ -1,3 +1,5 @@
+<app-navbar class="mat-elevation-z6" (toggleSidenav)="sidenav.toggle()"></app-navbar>
+
 <mat-sidenav-container class="docs-component-viewer-sidenav-container">
   <mat-sidenav #sidenav class="docs-component-viewer-sidenav"
               [opened]="!isScreenSmall()"
@@ -7,10 +9,10 @@
     <nav *ngFor="let category of lista">
       <h3>{{category.name}}</h3>
       <ul>
-        <li *ngFor="let component of category.items">
+        <li *ngFor="let component of lista">
           <a [routerLink]="'/' + (params | async)?.section+ '/' + component.id"
              routerLinkActive="docs-component-viewer-sidenav-item-selected">
-            {{component.name}}
+             {{category.name}}
           </a>
         </li>
       </ul>

@@ -8,6 +8,7 @@ import {ComponentHeaderModule} from '../component-page-header/component-page-hea
 import {FooterModule} from '../../shared/footer/footer';
 import {Observable} from 'rxjs/Observable';
 import {combineLatest} from 'rxjs/observable/combineLatest';
+import { NavBarModule } from '../../shared/navbar/navbar';
 
 const SMALL_WIDTH_BREAKPOINT = 720;
 
@@ -59,6 +60,7 @@ export class ComponentSidenav implements OnInit {
     RouterModule,
     CommonModule,
     ComponentHeaderModule,
+    NavBarModule,
     FooterModule,
     BrowserAnimationsModule
   ],
