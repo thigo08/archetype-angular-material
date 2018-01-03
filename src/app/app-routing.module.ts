@@ -1,4 +1,3 @@
-import { ComponentSidenav } from './pages/component-sidenav/component-sidenav';
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';

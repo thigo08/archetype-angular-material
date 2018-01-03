@@ -225,7 +225,7 @@ const ALL_CATEGORIES = DOCS[COMPONENTS].concat(DOCS[CDK]);
 @Injectable()
 export class DocumentationItems {
   getCategories(section: string): DocCategory[] {
-    return DOCS[section];
+    return DOCS['cdk'];
   }
 
   getItems(section: string): DocItem[] {

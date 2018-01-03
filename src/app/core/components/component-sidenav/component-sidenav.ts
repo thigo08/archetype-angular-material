@@ -1,14 +1,11 @@
 import {Component, NgZone, ViewEncapsulation, ViewChild, OnInit, NgModule} from '@angular/core';
-import {DocumentationItems} from '../../shared/documentation-items/documentation-items';
+import {DocumentationItems} from '../../../core/shared/documentation-items/documentation-items';
 import {MatSidenav, MatSidenavModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ActivatedRoute, Params, Router, RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
-import {ComponentHeaderModule} from '../component-page-header/component-page-header';
-import {FooterModule} from '../../shared/footer/footer';
 import {Observable} from 'rxjs/Observable';
 import {combineLatest} from 'rxjs/observable/combineLatest';
-import { NavBarModule } from '../../shared/navbar/navbar';
 
 const SMALL_WIDTH_BREAKPOINT = 720;
 
@@ -52,20 +49,3 @@ export class ComponentSidenav implements OnInit {
     return this.mediaMatcher.matches;
   }
 }
-
-
-@NgModule({
-  imports: [
-    MatSidenavModule,
-    RouterModule,
-    CommonModule,
-    ComponentHeaderModule,
-    NavBarModule,
-    FooterModule,
-    BrowserAnimationsModule
-  ],
-  exports: [ComponentSidenav],
-  declarations: [ComponentSidenav],
-  providers: [DocumentationItems],
-})
-export class ComponentSidenavModule {}

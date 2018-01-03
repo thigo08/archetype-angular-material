@@ -1,9 +1,9 @@
 @import '../node_modules/@angular/material/theming';
 
-@import './app/pages/component-sidenav/_component-sidenav-theme.scss';
+@import './app/core/components/component-sidenav/_component-sidenav-theme.scss';
 @import './app/pages/homepage/homepage-theme';
-@import './app/shared/footer/footer-theme';
-@import './app/shared/navbar/navbar-theme';
+@import './app/core/template/footer/footer-theme';
+@import './app/core/template/navbar/navbar-theme';
 @import './styles/api-theme';
 @import './styles/markdown-theme';
 @import './styles/svg-theme';

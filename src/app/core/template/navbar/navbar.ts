@@ -2,8 +2,7 @@ import {Component, NgModule, Output, EventEmitter} from '@angular/core';
 import {MatButtonModule, MatMenuModule, MatIconModule} from '@angular/material';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
-import {ThemePickerModule} from '../theme-picker/theme-picker';
-import {SECTIONS} from '../documentation-items/documentation-items';
+import {SECTIONS} from '../../shared/documentation-items/documentation-items';
 
 const SECTIONS_KEYS = Object.keys(SECTIONS);
 
@@ -24,10 +23,3 @@ export class NavBar {
     return SECTIONS_KEYS;
   }
 }
-
-@NgModule({
-  imports: [MatButtonModule, MatMenuModule, MatIconModule, RouterModule, ThemePickerModule, CommonModule],
-  exports: [NavBar],
-  declarations: [NavBar],
-})
-export class NavBarModule {}

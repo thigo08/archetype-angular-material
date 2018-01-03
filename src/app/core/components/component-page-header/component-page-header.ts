@@ -1,6 +1,5 @@
 import {Component, EventEmitter, NgModule, Output} from '@angular/core';
-import {ComponentPageTitle} from '../page-title/page-title';
-import {NavigationFocusModule} from '../../shared/navigation-focus/navigation-focus';
+import {ComponentPageTitle} from '../../../pages/page-title/page-title';
 import {MatButtonModule, MatIconModule} from '@angular/material';
 
 @Component({
@@ -17,11 +16,3 @@ export class ComponentPageHeader {
     return this._componentPageTitle.title;
   }
 }
-
-@NgModule({
-  imports: [MatButtonModule, MatIconModule, NavigationFocusModule],
-  exports: [ComponentPageHeader],
-  declarations: [ComponentPageHeader],
-  providers: [ComponentPageTitle],
-})
-export class ComponentHeaderModule { }

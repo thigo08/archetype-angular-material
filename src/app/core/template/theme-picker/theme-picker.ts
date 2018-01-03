@@ -1,11 +1,6 @@
-import {Component, ViewEncapsulation, ChangeDetectionStrategy, NgModule} from '@angular/core';
+import {Component, ViewEncapsulation, ChangeDetectionStrategy} from '@angular/core';
 import {StyleManager} from '../style-manager/style-manager';
 import {ThemeStorage, DocsSiteTheme} from './theme-storage/theme-storage';
-import {
-  MatButtonModule, MatGridListModule, MatIconModule, MatMenuModule,
-  MatTooltipModule
-} from '@angular/material';
-import {CommonModule} from '@angular/common';
 
 
 @Component({
@@ -75,18 +70,3 @@ export class ThemePicker {
     return this.themes.find(theme => theme.href === href);
   }
 }
-
-@NgModule({
-  imports: [
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
-    MatGridListModule,
-    MatTooltipModule,
-    CommonModule
-  ],
-  exports: [ThemePicker],
-  declarations: [ThemePicker],
-  providers: [StyleManager, ThemeStorage],
-})
-export class ThemePickerModule { }

@@ -7,9 +7,3 @@ import {Component, NgModule} from '@angular/core';
 })
 export class Footer { }
 
-
-@NgModule({
-  exports: [Footer],
-  declarations: [Footer],
-})
-export class FooterModule {}
