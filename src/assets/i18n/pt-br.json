@@ -1,0 +1,16 @@
+{
+  "titulo": "Archetype Angular Material",
+  "subTitulo": "Projeto base para construção de aplicações WEB",
+  "texto1": "Sprint do Zero para a aplicação",
+  "subTexto1":
+    "Acerte o chão em execução com componentes abrangentes e modernos de UI que funcionam em toda a Web, móveis e desktop.",
+  "texto2": "Rápido e consistente",
+  "subTexto2":
+    "Desempenho finamente sintonizado, porque cada milissegundo conta. Totalmente testado em navegadores modernos.",
+  "texto3": "Versátil",
+  "subTexto3":
+    "Themable, para quando você precisa permanecer na marca ou simplesmente ter uma cor favorita. Acessível e internacionalizado para que todos os usuários sejam bem-vindos.",
+  "texto4": "Otimizado para Angular",
+  "subTexto4":
+    "Construído pela equipe angular para se integrar perfeitamente com o Angular."
+}

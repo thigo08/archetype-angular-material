@@ -3,6 +3,7 @@ import {SvgViewerModule} from '../../core/shared/svg-viewer/svg-viewer';
 import {MatButtonModule} from '@angular/material';
 import {RouterModule} from '@angular/router';
 import {ComponentPageTitle} from '../page-title/page-title';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-homepage',
@@ -18,7 +19,7 @@ export class Homepage implements OnInit {
 }
 
 @NgModule({
-  imports: [SvgViewerModule, MatButtonModule],
+  imports: [SvgViewerModule, MatButtonModule, TranslateModule],
   exports: [Homepage],
   declarations: [Homepage],
 })

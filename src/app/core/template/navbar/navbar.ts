@@ -3,6 +3,7 @@ import {MatButtonModule, MatMenuModule, MatIconModule} from '@angular/material';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {SECTIONS} from '../../shared/documentation-items/documentation-items';
+import { TranslateService } from '@ngx-translate/core';
 
 const SECTIONS_KEYS = Object.keys(SECTIONS);
 
@@ -21,5 +22,14 @@ export class NavBar {
 
   get sectionKeys() {
     return SECTIONS_KEYS;
+
+  }
+
+  constructor(  private translateService: TranslateService) {
+  }
+
+
+  changeLanguage(language: string): void {
+    this.translateService.use(language).subscribe(() => null);
   }
 }

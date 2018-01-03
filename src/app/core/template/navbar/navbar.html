@@ -10,6 +10,31 @@
   <a mat-button class="docs-navbar-hide-small docs-button" routerLink="guides">Guides</a>
   <div class="flex-spacer"></div>
   <theme-picker></theme-picker>
+  <div fxFlex class="text-right">
+    <button mat-icon-button [matMenuTriggerFor]="matmenu">
+      <mat-icon>public</mat-icon>
+    </button>
+    <mat-menu #matmenu="matMenu">
+      <button mat-menu-item (click)="changeLanguage('en')">
+        <mat-icon>flag</mat-icon>
+        <span>
+          English
+        </span>
+      </button>
+      <button mat-menu-item (click)="changeLanguage('es')">
+        <mat-icon>flag</mat-icon>
+        <span>
+          Español
+        </span>
+      </button>
+      <button mat-menu-item (click)="changeLanguage('pt-br')">
+        <mat-icon>flag</mat-icon>
+        <span>
+          Português
+        </span>
+      </button>
+    </mat-menu>
+  </div>
   <a mat-button class="docs-button docs-navbar-hide-small" href="https://github.com/angular/material2" aria-label="GitHub Repository">
     <img class="docs-angular-logo" src="../../../assets/img/homepage/github-circle-white-transparent.svg" alt="angular"> GitHub
   </a>

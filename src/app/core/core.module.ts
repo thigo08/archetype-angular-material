@@ -15,6 +15,7 @@ import { ComponentPageHeader } from './components/component-page-header/componen
 import { DocumentationItems } from '../core/shared/documentation-items/documentation-items';
 import { StyleManager } from './template/style-manager/style-manager';
 import { ThemeStorage } from './template/theme-picker/theme-storage/theme-storage';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import { ThemeStorage } from './template/theme-picker/theme-storage/theme-storag
     SharedModule,
     ReactiveFormsModule,
     NavigationFocusModule,
+    TranslateModule,
     HomepageModule
   ],
   exports: [NavBar, ThemePicker, Footer, ComponentSidenav, ComponentPageHeader],
